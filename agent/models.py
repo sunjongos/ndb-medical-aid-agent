@@ -87,6 +87,8 @@ class Encounter:
     def __post_init__(self):
         assert self.department in DEPARTMENTS, f"department must be one of {DEPARTMENTS}"
         assert self.setting in SETTING
+        if isinstance(self.flags, list):
+            self.flags = {k: True for k in self.flags}
         if isinstance(self.costs, dict):
             self.costs = Costs(**self.costs)
 
