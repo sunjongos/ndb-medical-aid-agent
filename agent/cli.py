@@ -8,6 +8,13 @@
 """
 from __future__ import annotations
 import argparse, json, pathlib, sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 from typing import Any, Dict, List
 from .kb import KB
 from .models import load_patient, load_encounter, to_dict
