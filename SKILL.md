@@ -92,6 +92,11 @@ python -m agent eval      # 골드 케이스 7건 × 42판정, hard miss 0이어
 ## 지식 갱신
 새 제도·수치 변경 시 `wiki/programs/<id>.md`의 frontmatter(hard/soft/amount)와 `db/thresholds_<year>.json`을 함께 수정하고 `pytest -q`로 회귀 확인. 규칙 DSL: `{fact, op(lte|gte|eq|neq|in|not_null), ref(thresholds 경로)|value, fail|warn}`. 새 추정 함수는 `agent/rules.py:AMOUNTS`에 등록.
 
+## Antigravity IDE & LUCA 뇌 시스템 연계
+- **대뇌피질 (Port 5050 HBM 메모리)**: 환자 매칭 및 원무과 상담 이력 캐싱
+- **심층피질 (Neo4j Graph DB)**: `knowledge_assets/ontology_graph.json` 지식그래프 노드/관계 연동
+- **NDB Palantir DSS**: 환자 본인부담 감면 시뮬레이션 데이터를 병원 재무/미수금 리스크 관리 모델과 실시간 연계
+
 ## 참고 파일
 - `wiki/index.md` — 온톨로지 설명·제도 목록
 - `assets/` — 직원 매뉴얼 v2·환자 안내책자(원본 HTML/PDF), 위키의 출처

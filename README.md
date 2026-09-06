@@ -1,17 +1,17 @@
-# ndb-medical-aid-agent
+# ndb-medical-aid-agent-for-antigravity
 
-남양주백병원(NDB) 환자 의료비 지원 매칭 에이전트 — **LLM-wiki 온톨로지 + 기호 규칙 엔진(neurosymbolic)** → 원무과 판정 시트 + 환자 카톡용 PDF.
+남양주백병원(NDB) 환자 의료비 지원 매칭 에이전트 — **LLM-wiki 온톨로지 + 기호 규칙 엔진(neurosymbolic)** → 원무과 판정 시트 + 환자 카톡용 PDF (Google Antigravity IDE & Claude Code 최적화).
 
 ```
-환자 정보 + 진료내용 ──► [Claude: 추출] ──► patient.json / encounter.json
-                                              │
+환자 정보 + 진료내용 ──► [LLM/Claude: 추출] ──► patient.json / encounter.json
+                                               │
                     wiki/programs/*.md ◄──────┤  db/thresholds_2026.json
                     (규칙 frontmatter+맥락)     ▼
                                   [rules.py: 기호 판정] ──► results.json / staff_sheet.md
                                               │ review 항목
-                                  [Claude: 위키 근거 검토] ──► resolution.json
+                                  [LLM: 위키 근거 검토] ──► resolution.json
                                               │
-                                  [Claude: 환자 문장] ──► narrative.json
+                                  [LLM: 환자 문장] ──► narrative.json
                                               ▼
                                   [render.py: Playwright] ──► NDB_의료비지원안내_<이름>.pdf (120×213mm)
 ```
@@ -22,7 +22,7 @@
 ## 입력 경로 3가지
 | 경로 | 명령 | 용도 |
 |---|---|---|
-| EMR 화면 캡처 + 진료내용 텍스트 | `extract --image --text` → Claude 판독 → `merge` | **현재 운영 방식** |
+| EMR 화면 캡처 + 진료내용 텍스트 | `extract --image --text` → LLM 판독 → `merge` | **현재 운영 방식** |
 | JSON 직접 | `match --patient --encounter` | 테스트·재실행 |
 | FHIR R4 Bundle | `extract --fhir` | EMR 직접 연동 시 (로컬 CodeSystem 3종) |
 
@@ -44,6 +44,14 @@ Docker:
 docker build -t ndb-aid .
 docker run --rm -v $PWD/output:/app/output ndb-aid run --patient examples/patient_spine.json --encounter examples/encounter_spine.json --out output/spine
 ```
+
+## Google Antigravity IDE 스킬로 설치
+Antigravity IDE 워크스페이스의 `.agent/skills/ndb-medical-aid-agent/`에 등록하거나 링크합니다:
+```bash
+mkdir -p .agent/skills/ndb-medical-aid-agent
+cp SKILL.md .agent/skills/ndb-medical-aid-agent/
+```
+이후 Antigravity IDE에서 "이 환자 의료비 지원 되나?", "원무과 상담", "재난적 의료비", "산정특례" 등을 요청하면 `SKILL.md` 순서대로 기호 엔진과 LLM이 자동 실행됩니다.
 
 ## Claude Code 스킬로 설치
 ```bash
