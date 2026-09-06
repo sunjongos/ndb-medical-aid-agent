@@ -1,0 +1,463 @@
+{
+ "ts": "2026-09-06T21:26:36",
+ "n": 42,
+ "exact": 42,
+ "soft": 0,
+ "hard_miss": 0,
+ "exact_acc": 1.0,
+ "lenient_acc": 1.0,
+ "per_program": {
+  "special_disease": {
+   "n": 5,
+   "hit": 5,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "cancer_aid": {
+   "n": 3,
+   "hit": 3,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "catastrophic_medical": {
+   "n": 7,
+   "hit": 7,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "emergency_welfare_national": {
+   "n": 6,
+   "hit": 6,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "living_support": {
+   "n": 2,
+   "hit": 2,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "medical_aid_copay_refund": {
+   "n": 1,
+   "hit": 1,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "dementia_aid": {
+   "n": 2,
+   "hit": 2,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "copay_ceiling": {
+   "n": 2,
+   "hit": 2,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "rare_disease_aid": {
+   "n": 2,
+   "hit": 2,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "knee_replacement": {
+   "n": 3,
+   "hit": 3,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "senior65_benefits": {
+   "n": 5,
+   "hit": 5,
+   "soft": 0,
+   "acc": 1.0
+  },
+  "emergency_welfare_gyeonggi": {
+   "n": 4,
+   "hit": 4,
+   "soft": 0,
+   "acc": 1.0
+  }
+ },
+ "rows": [
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "special_disease",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": "미등록 — 즉시 등록 필요 (소급 불가)"
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "cancer_aid",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "catastrophic_medical",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "emergency_welfare_national",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "living_support",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "medical_aid_copay_refund",
+   "expected": "likely",
+   "got": "likely",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "dementia_aid",
+   "expected": "likely",
+   "got": "likely",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "copay_ceiling",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "건강보험 가입자만 해당(의료급여는 별도 상한제)"
+  },
+  {
+   "case": "internal_colon_cancer_medical_aid",
+   "program": "rare_disease_aid",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "희귀질환 산정특례 대상 아님"
+  },
+  {
+   "case": "joint_preop_basic_bilateral",
+   "program": "knee_replacement",
+   "expected": "likely",
+   "got": "likely",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "joint_preop_basic_bilateral",
+   "program": "dementia_aid",
+   "expected": "likely",
+   "got": "likely",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "joint_preop_basic_bilateral",
+   "program": "senior65_benefits",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "joint_preop_basic_bilateral",
+   "program": "catastrophic_medical",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "외래 진료는 중증질환(암·뇌혈관·심장·희귀·중증난치·중증화상)만 대상; assets 값 없음 → 재산 7억 원 초과"
+  },
+  {
+   "case": "joint_preop_basic_bilateral",
+   "program": "cancer_aid",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "암 진단 아님; 의료급여·차상위 아님 (건강보험가입자 신규지원은 2021.6.30 종료)"
+  },
+  {
+   "case": "neuro_parkinson_outpatient_high_income",
+   "program": "special_disease",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": "미등록 — 즉시 등록 필요 (소급 불가)"
+  },
+  {
+   "case": "neuro_parkinson_outpatient_high_income",
+   "program": "rare_disease_aid",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "희귀질환 산정특례 대상 아님; 기준중위소득 140% 초과"
+  },
+  {
+   "case": "neuro_parkinson_outpatient_high_income",
+   "program": "catastrophic_medical",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "의료비 부담 기준 미달 (연소득의 20%(15,117,451원) 초과 필요)"
+  },
+  {
+   "case": "neuro_parkinson_outpatient_high_income",
+   "program": "emergency_welfare_national",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "기준중위소득 75% 초과; 위기사유 없음"
+  },
+  {
+   "case": "neuro_parkinson_outpatient_high_income",
+   "program": "senior65_benefits",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "만 65세 미만"
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "catastrophic_medical",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "emergency_welfare_gyeonggi",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "senior65_benefits",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "copay_ceiling",
+   "expected": "likely",
+   "got": "likely",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "emergency_welfare_national",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "위기사유 없음"
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "knee_replacement",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "기초수급자·차상위·한부모 아님; 무릎 인공관절 수술 아님; 이미 수술 완료 — 사전신청 불가"
+  },
+  {
+   "case": "spine_fusion_elderly_private_ins",
+   "program": "special_disease",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "산정특례 대상 질환 아님"
+  },
+  {
+   "case": "spine_outpatient_mild_no_support",
+   "program": "catastrophic_medical",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "외래 진료는 중증질환(암·뇌혈관·심장·희귀·중증난치·중증화상)만 대상"
+  },
+  {
+   "case": "spine_outpatient_mild_no_support",
+   "program": "special_disease",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "산정특례 대상 질환 아님"
+  },
+  {
+   "case": "spine_outpatient_mild_no_support",
+   "program": "emergency_welfare_national",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "기준중위소득 75% 초과; 위기사유 없음"
+  },
+  {
+   "case": "spine_outpatient_mild_no_support",
+   "program": "emergency_welfare_gyeonggi",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "기준중위소득 100% 초과; 위기사유 없음"
+  },
+  {
+   "case": "spine_outpatient_mild_no_support",
+   "program": "knee_replacement",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "만 60세 미만; 기초수급자·차상위·한부모 아님; 무릎 인공관절 수술 아님"
+  },
+  {
+   "case": "spine_outpatient_mild_no_support",
+   "program": "senior65_benefits",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "만 65세 미만"
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "special_disease",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "emergency_welfare_national",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "living_support",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "emergency_welfare_gyeonggi",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "catastrophic_medical",
+   "expected": "eligible",
+   "got": "eligible",
+   "ok": true,
+   "soft": false,
+   "why": ""
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "senior65_benefits",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "만 65세 미만"
+  },
+  {
+   "case": "surgery_trauma_main_earner_jobless",
+   "program": "cancer_aid",
+   "expected": "ineligible",
+   "got": "ineligible",
+   "ok": true,
+   "soft": false,
+   "why": "암 진단 아님; 의료급여·차상위 아님 (건강보험가입자 신규지원은 2021.6.30 종료)"
+  },
+  {
+   "case": "unknown_income_review",
+   "program": "catastrophic_medical",
+   "expected": "review",
+   "got": "review",
+   "ok": true,
+   "soft": false,
+   "why": "assets 값 없음 → 재산 7억 원 초과; 소득 정보 없음 → 소득구간 미확정"
+  },
+  {
+   "case": "unknown_income_review",
+   "program": "emergency_welfare_national",
+   "expected": "review",
+   "got": "review",
+   "ok": true,
+   "soft": false,
+   "why": "income_pct 값 없음 → 기준중위소득 75% 초과"
+  },
+  {
+   "case": "unknown_income_review",
+   "program": "emergency_welfare_gyeonggi",
+   "expected": "review",
+   "got": "review",
+   "ok": true,
+   "soft": false,
+   "why": "income_pct 값 없음 → 기준중위소득 100% 초과"
+  }
+ ]
+}

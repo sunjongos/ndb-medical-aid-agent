@@ -1,0 +1,27 @@
+{
+ "description": "소득·재산 미상 → 재난적 의료비 review, 긴급복지 review",
+ "patient": {
+  "name": "G",
+  "age": 55,
+  "household_size": 2,
+  "crisis_events": [
+   "job_loss"
+  ]
+ },
+ "encounter": {
+  "department": "internal",
+  "setting": "inpatient",
+  "surgery": true,
+  "surgery_done": true,
+  "discharge_date": "2026-09-01",
+  "costs": {
+   "covered_copay": 1000000,
+   "noncovered": 3000000
+  }
+ },
+ "expected": {
+  "catastrophic_medical": "review",
+  "emergency_welfare_national": "review",
+  "emergency_welfare_gyeonggi": "review"
+ }
+}

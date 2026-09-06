@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<style>
+@page{size:A4;margin:13mm 13mm 15mm}
+*{box-sizing:border-box}
+body{font-family:"Noto Sans CJK KR",sans-serif;color:#1f2937;font-size:10pt;line-height:1.5;margin:0;word-break:keep-all}
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #0066CC;padding-bottom:8px;margin-bottom:12px}
+.brand{font-size:17pt;font-weight:900;color:#0066CC}.brand span{color:#FF6600}
+.slogan{font-size:9pt;color:#6b7280}.tag{font-size:9pt;color:#6b7280;text-align:right}
+h1{font-size:18pt;margin:2px 0 6px;letter-spacing:-.5px}
+h2{font-size:13pt;color:#0066CC;margin:16px 0 6px;padding-left:10px;border-left:4px solid #FF6600;page-break-after:avoid}
+h3{font-size:11pt;margin:10px 0 4px;color:#1e3a5f;page-break-after:avoid}
+p{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:9pt;margin:4px 0 8px;page-break-inside:auto}
+tr{page-break-inside:avoid}
+th,td{border:1px solid #d1d5db;padding:4px 6px;text-align:left;vertical-align:top}
+th{background:#eef4fb;color:#1e3a5f}
+ul{margin:3px 0 3px 18px;padding:0}li{margin:2px 0}
+.box{border:1.5px solid #dbe4f0;border-radius:8px;padding:8px 12px;margin:6px 0;page-break-inside:avoid}
+.warn{background:#fff7ed;border-left:4px solid #FF6600;padding:6px 10px;border-radius:4px;margin:6px 0}
+.key{background:#eef4fb;border-left:4px solid #0066CC;padding:6px 10px;border-radius:4px;margin:6px 0}
+.flow{display:flex;gap:6px;margin:6px 0}
+.step{flex:1;background:#eef4fb;border-radius:8px;padding:6px 8px;font-size:9pt;text-align:center;position:relative}
+.step b{display:block;color:#0066CC;font-size:10pt}
+.step:not(:last-child)::after{content:"▶";position:absolute;right:-9px;top:40%;color:#FF6600;font-size:9pt}
+.chk{font-size:12pt;color:#0066CC}
+.card{border:2px solid #0066CC;border-radius:12px;padding:10px 14px;margin:8px 0;page-break-inside:avoid;background:#fff}
+.card h3{margin-top:0;color:#0066CC}
+.pill{display:inline-block;background:#FF6600;color:#fff;border-radius:10px;padding:0 8px;font-size:8.5pt;font-weight:700;margin-left:4px}
+.dept{display:inline-block;border-radius:4px;padding:0 5px;font-size:8.5pt;font-weight:700;color:#fff;margin-right:2px}
+.s{background:#0066CC}.m{background:#059669}.g{background:#7c3aed}.a{background:#6b7280}
+.pb{page-break-before:always}
+.ftr{margin-top:12px;font-size:8.5pt;color:#6b7280;border-top:1px solid #e5e7eb;padding-top:6px}
+.q{font-weight:700;color:#1e3a5f}
+.todo{color:#b45309;font-weight:700}
+</style></head><body>
+
+<div class="hdr">
+ <div><div class="brand">남양주<span>백병원</span></div><div class="slogan">New, Different and much Better</div></div>
+ <div class="tag">원내 직원 교육자료 v2 · 외래 간호사 · 원무과 · 의료사회복지<br>2026년 9월</div>
+</div>
+
+<h1>환자 의료비 지원제도 원내 매뉴얼<br><span style="font-size:12pt;color:#6b7280;font-weight:400">척추·관절 / 내과·신경과 / 외과 전 진료과 적용</span></h1>
+
+<div class="key"><b>우리 병원의 목표</b> — "지원 제도를 가장 잘 챙겨주는 병원". 외래 간호사가 <b>30초 스크리닝</b>으로 대상 환자를 찾아 원무과로 연결하고, 원무과가 제도별 상담·서류 발급·기한 고지까지 책임진다. 환자에게는 카톡용 안내책자를 전송한다.</div>
+
+<h2>0. 외래 간호사 30초 스크리닝 카드 <span class="pill">외래 게시용</span></h2>
+<div class="card">
+<h3>아래 중 <u>하나라도</u> 해당하면 → "원무과 의료비 지원 상담" 연결</h3>
+<table>
+ <tr><th style="width:5%"></th><th style="width:40%">체크 항목</th><th>연결되는 제도</th></tr>
+ <tr><td class="chk">☐</td><td>기초생활수급자·차상위·의료급여 환자</td><td>재난적 의료비(80%), 암·인공관절·치매 지원, 의료급여 본인부담 환급</td></tr>
+ <tr><td class="chk">☐</td><td>수술·입원 예정이며 본인부담 예상액이 <b>100만 원 이상</b></td><td>재난적 의료비, 본인부담상한제, 긴급복지·무한돌봄</td></tr>
+ <tr><td class="chk">☐</td><td>암·뇌혈관·심장·희귀·중증난치·중증화상·중증외상 진단</td><td>산정특례(5~10%), 암환자 의료비, 희귀질환 의료비</td></tr>
+ <tr><td class="chk">☐</td><td>가장(주소득자)이 환자, 또는 최근 실직·폐업·소득 급감</td><td>긴급복지(국가형), 경기도 무한돌봄, 생계지원</td></tr>
+ <tr><td class="chk">☐</td><td>간병인 필요, 보호자가 간병 때문에 일을 못 함</td><td>경기도 무한돌봄 간병비(300만 원)</td></tr>
+ <tr><td class="chk">☐</td><td>만 60세 이상 + 무릎 통증 / 기억력 저하 호소</td><td>인공관절 수술비, 치매 검진·치료관리비</td></tr>
+ <tr><td class="chk">☐</td><td>만 65세 이상</td><td>폐렴구균 무료접종, 임플란트·틀니 30%</td></tr>
+ <tr><td class="chk">☐</td><td>"병원비 걱정" "돈 때문에 수술 미룬다"는 말을 함</td><td>전 제도 종합 상담 + 의료사회복지 연계</td></tr>
+</table>
+<p style="margin:4px 0 0;font-size:9pt"><b>연결 방법:</b> EMR 메모 "의료비지원 상담 요청" + 원무과 내선 <span class="todo">[내선번호]</span> 통보 → 원무과가 당일 상담 또는 퇴원 전 상담 일정 안내.</p>
+</div>
+
+<h2>1. 제도 총람 — 한눈에 보기</h2>
+<table>
+ <tr><th style="width:17%">제도</th><th style="width:20%">대상</th><th style="width:28%">지원 내용</th><th style="width:15%">신청처·기한</th><th>진료과</th></tr>
+ <tr><td><b>재난적 의료비</b></td><td>중위소득 100% 이하(200%까지 개별심사), 재산 7억 이하</td><td>비급여 포함 본인부담의 50~80%, 연 최대 5,000만 원. 입원은 전 질환, 외래는 중증질환만</td><td>공단 지사 / 퇴원 후 180일</td><td><span class="dept s">척추관절</span><span class="dept m">내과신경과</span><span class="dept g">외과</span></td></tr>
+ <tr><td><b>본인부담상한제</b></td><td>전 건강보험 가입자(자동)</td><td>연간 급여 본인부담이 소득분위 상한액(90만~843만 원) 초과 시 초과분 전액 환급</td><td>공단 / 3년 내 신청</td><td>전 과</td></tr>
+ <tr><td><b>긴급복지 의료지원</b>(국가)</td><td>중위소득 75% 이하 + 위기사유</td><td>의료비 300만 원 이내(1회, 추가 1회 가능), 선지원 후조사</td><td>129·주민센터 / 퇴원 전</td><td>전 과</td></tr>
+ <tr><td><b>경기도 무한돌봄</b></td><td>중위소득 100% 이하, 국가형 탈락·종료 후</td><td>비급여 의료비 300만 원(2회), 간병비 300만 원(1회), 항암비 100만 원(3회)</td><td>031-120·주민센터 / 퇴원 전후 30일</td><td>전 과</td></tr>
+ <tr><td><b>산정특례</b></td><td>암·뇌혈관·심장·희귀·중증난치·중증화상·중증외상·결핵</td><td>급여 본인부담률 0~10%로 경감(암·뇌혈관·심장 5%, 희귀·난치 10%→5% 인하 예정)</td><td>병원 등록(공단)</td><td><span class="dept m">내과신경과</span><span class="dept g">외과</span><span class="dept s">척추관절</span></td></tr>
+ <tr><td><b>암환자 의료비</b></td><td>의료급여·차상위 성인 암환자</td><td>급여·비급여 구분 없이 연 300만 원, 최대 3년 (건보가입자 신규 종료)</td><td>보건소</td><td><span class="dept m">내과</span><span class="dept g">외과</span></td></tr>
+ <tr><td><b>희귀질환 의료비</b></td><td>희귀질환 산정특례 + 소득(중위 140%) 기준</td><td>급여 본인부담금 등 지원, 2026 부양의무자 소득기준 폐지</td><td>보건소</td><td><span class="dept m">내과신경과</span><span class="dept s">척추관절</span></td></tr>
+ <tr><td><b>치매 검진·관리비</b></td><td>60세 이상, 중위 120% 이하</td><td>선별검사 무료, 감별검사 8~11만 원, 치료관리비 월 3만 원(지자체)</td><td>보건소·치매안심센터</td><td><span class="dept m">신경과</span></td></tr>
+ <tr><td><b>노인 인공관절</b></td><td>60세 이상 수급자·차상위·한부모</td><td>한쪽 100~120만 원, 양쪽 최대 240만 원. 검사·수술비, 비급여 일부 포함</td><td>보건소 / <b>수술 전</b></td><td><span class="dept s">관절</span></td></tr>
+ <tr><td><b>65세+ 접종·치과</b></td><td>만 65세 이상</td><td>폐렴구균 1회 무료, 임플란트 2개·틀니 7년 1회 본인부담 30%</td><td>보건소·지정의료기관</td><td>전 과</td></tr>
+ <tr><td><b>의료급여 본인부담 환급</b></td><td>의료급여 1·2종</td><td>30일간 1종 2만 원·2종 20만 원 초과분의 50% 환급, 외래 1회 2만 원·월 5만 원 상한</td><td>공단(자동·신청)</td><td>전 과</td></tr>
+ <tr><td><b>긴급복지 생계지원</b></td><td>위기가구</td><td>1인 78.3만~4인 199.5만 원/월, 3~6개월</td><td>129·주민센터</td><td>전 과</td></tr>
+</table>
+
+<h2 class="pb">2. 진료과별 적용 시나리오</h2>
+
+<h3><span class="dept s">척추·관절센터</span> 유합술·감압술·내시경·인공관절·척추질환</h3>
+<table>
+ <tr><th style="width:28%">상황</th><th>1순위 제도</th><th style="width:30%">원무과 액션</th></tr>
+ <tr><td>고령 요추 유합술, 비급여 재료·검사 큰 경우</td><td>재난적 의료비(입원) → 본인부담상한제(급여분) 병행</td><td>비급여 세부내역서(급여/전액본인부담/비급여/1인실 구분), 180일 고지</td></tr>
+ <tr><td>수급자·차상위 무릎 인공관절</td><td>노인 인공관절 수술비(보건소) + 재난적 의료비</td><td><b>수술 전</b> 보건소 사전신청 안내 — 수술 후엔 불가</td></tr>
+ <tr><td>강직성 척추염·중증 류마티스 등</td><td>산정특례(중증난치 10%) + 희귀질환 의료비</td><td>산정특례 등록 확인, 미등록 시 즉시 등록</td></tr>
+ <tr><td>수술 후 간병인 필요, 배우자 소득 중단</td><td>경기도 무한돌봄 간병비 300만 원 + 긴급복지 생계</td><td>퇴원 전 031-120 안내, 입원확인서 발급</td></tr>
+ <tr><td>도수치료·1인실 비중 큰 환자</td><td>재난적 의료비 <b>제외항목</b>임을 사전 고지</td><td>기대치 조정, 다른 제도 안내</td></tr>
+</table>
+
+<h3><span class="dept m">내과·신경과</span> 뇌졸중·심장·당뇨합병증·암·치매·희귀질환·장기입원</h3>
+<table>
+ <tr><th style="width:28%">상황</th><th>1순위 제도</th><th style="width:30%">원무과 액션</th></tr>
+ <tr><td>뇌경색·심근경색 급성기 입원</td><td>산정특례(뇌혈관·심장 5%, 최대 30일, 별도 등록 불필요) → 재난적 의료비</td><td>산정특례 적용 여부 청구 확인, 퇴원 시 재난적 의료비 안내</td></tr>
+ <tr><td>암 진단(수급자·차상위)</td><td>산정특례(암 5%, 5년) + 암환자 의료비 연 300만 원</td><td>등록 신청서 작성 지원, 보건소 안내</td></tr>
+ <tr><td>희귀질환·중증난치 (파킨슨 등)</td><td>산정특례 10%(하반기 5% 인하 예정) + 희귀질환 의료비</td><td>등록번호 확인, 소득기준 안내</td></tr>
+ <tr><td>60세 이상 인지저하 호소</td><td>치매안심센터 선별검사 무료 → 감별검사비·치료관리비</td><td>남양주시 치료관리비 시행 여부 <span class="todo">[보건소 확인]</span></td></tr>
+ <tr><td>만성질환 장기 입원, 급여 본인부담 누적</td><td>본인부담상한제(사전급여: 같은 병원 최고상한 초과 시 병원비 면제)</td><td>연간 본인부담 누계 안내, 8월 공단 안내문 확인 권고</td></tr>
+ <tr><td>65세 이상 외래</td><td>폐렴구균 접종·임플란트·틀니</td><td>예방접종 안내문 배포</td></tr>
+</table>
+
+<h3><span class="dept g">외과</span> 급성복증·외상·화상·종양·항문질환</h3>
+<table>
+ <tr><th style="width:28%">상황</th><th>1순위 제도</th><th style="width:30%">원무과 액션</th></tr>
+ <tr><td>중증외상·중증화상 응급수술</td><td>산정특례(5%, 외상 30일·화상 1년) → 재난적 의료비</td><td>응급실 단계에서 산정특례 코딩 확인</td></tr>
+ <tr><td>갑작스러운 수술로 생계 곤란</td><td>긴급복지 의료지원 300만 원 + 생계지원(선지원 후조사)</td><td>입원 중 129 신고 가능 — 퇴원 기다리지 말 것</td></tr>
+ <tr><td>산업재해·교통사고</td><td>산재보험·자동차보험 우선 (국가 지원과 중복 불가 항목 확인)</td><td>사고 경위 확인 후 보험 안내</td></tr>
+ <tr><td>대장암·위암 등 소화기암</td><td>산정특례 + 암환자 의료비(수급자·차상위)</td><td>동일 내과 절차</td></tr>
+</table>
+
+<h2>3. 제도별 상세</h2>
+
+<h3>3-1. 재난적 의료비 지원 (핵심)</h3>
+<table>
+ <tr><th style="width:20%">항목</th><th>내용</th></tr>
+ <tr><td>대상 질환</td><td>입원: 모든 질환 / 외래: 암·뇌혈관·심장·희귀·중증난치·중증화상만</td></tr>
+ <tr><td>소득</td><td>기준중위소득 100% 이하 중심(건강보험료로 판정). 100~200%는 개별심사</td></tr>
+ <tr><td>재산</td><td>7억 원 이하</td></tr>
+ <tr><td>의료비 부담 기준</td><td>수급자·차상위 80만 원 초과 / 중위 50% 이하 160만 원 초과 / 중위 50~100% 연소득 10% 초과 / 100~200% 연소득 20% 초과 (개별심사)</td></tr>
+ <tr><td>지원율</td><td>수급자·차상위 80% / 중위 50% 이하 70% / 50~100% 60% / 100~200% 50%</td></tr>
+ <tr><td>한도</td><td>연 최대 5,000만 원</td></tr>
+ <tr><td>계산식</td><td>[급여 일부본인부담 중 상한제 미지원분 + 전액본인부담 + 비급여] − [제외항목 + 국가·지자체 지원금 + 실손보험금 등] × 지원율</td></tr>
+ <tr><td>제외</td><td>경증질환, 도수치료, 1인실 등 / 실손보험금은 차감</td></tr>
+ <tr><td>신청</td><td>최종 진료일 다음 날부터 180일 이내, 공단 남양주가평지사 방문(입원 중 신청 가능)</td></tr>
+</table>
+<div class="warn">일부 온라인 자료는 구(舊)기준(한도 3,000만 원·지원율 50% 단일)을 그대로 싣고 있음. 원내 기준은 <b>연 5,000만 원·50~80% 차등</b>으로 통일하되, 공단 최신 고시로 분기별 재확인.</div>
+
+<h3>3-2. 본인부담상한제</h3>
+<p>1년간 여러 병원·약국의 <b>급여 본인부담금 합계</b>가 소득분위 상한액을 넘으면 초과분 전액을 공단이 환급. 2026년 진료분 상한액: 1분위 90만 / 2~3분위 112만 / 4~5분위 173만 / 6~7분위 326만 / 8분위 446만 / 9분위 536만 / 10분위 843만 원. 비급여·선별급여·임플란트·2~3인실료 등 제외. 매년 8월 공단 안내문, <b>미신청 시 3년 후 소멸</b>. 같은 병원 입원으로 최고 상한액 초과 시 병원이 초과분을 받지 않는 사전급여 적용.</p>
+
+<h3>3-3. 긴급복지 의료지원(국가형) · 경기도 무한돌봄</h3>
+<table>
+ <tr><th style="width:18%">구분</th><th>긴급복지(국가형)</th><th>경기도형 긴급복지(무한돌봄)</th></tr>
+ <tr><td>소득</td><td>중위소득 75% 이하 (1인 192만·4인 487만 원)</td><td>중위소득 100% 이하 (1인 256만·4인 649만 원)</td></tr>
+ <tr><td>재산</td><td>중소도시 1억 5,200만 원 이하 + 금융재산 600만 원+생활준비금</td><td>시 지역 3억 1,000만 원 이하 + 금융 1,200만 원+생활준비금</td></tr>
+ <tr><td>위기사유</td><td colspan="2">주소득자 사망·실직·휴폐업, 중한 질병·부상, 방임·학대·가정폭력, 화재·재해, 이혼·단전 등 (도형은 간병으로 인한 소득활동 곤란, 과다채무도 인정)</td></tr>
+ <tr><td>의료지원</td><td>300만 원 이내(본인부담+일부 비급여), 1회+추가 1회</td><td>비급여 300만 원 이내 2회 + <b>간병비 300만 원</b> 1회 + 항암비 100만 원 3회</td></tr>
+ <tr><td>생계</td><td>1인 78.3만~4인 199.5만 원/월, 최대 6개월</td><td>동일 수준, 최대 6회</td></tr>
+ <tr><td>신청</td><td>129, 주민센터 — <b>선지원 후조사</b>, 퇴원 전 신청 원칙</td><td>031-120(경기도 핫라인), 주민센터 — 국가형 탈락·종료 후</td></tr>
+</table>
+
+<h3>3-4. 산정특례 (본인일부부담금 산정특례)</h3>
+<table>
+ <tr><th>질환군</th><th>본인부담률</th><th>기간</th><th>등록</th></tr>
+ <tr><td>암</td><td>5%</td><td>5년(재발 시 재등록)</td><td>병원 신청서 → 공단</td></tr>
+ <tr><td>뇌혈관·심장질환, 중증외상</td><td>5%</td><td>최대 30일(수술·시술 관련)</td><td>별도 등록 없이 병원 적용</td></tr>
+ <tr><td>희귀·중증난치질환</td><td>10% → 2026 하반기 5%로 단계 인하</td><td>5년</td><td>병원 신청서 → 공단</td></tr>
+ <tr><td>중증화상</td><td>5%</td><td>1년(재등록 가능)</td><td>병원 신청</td></tr>
+ <tr><td>결핵</td><td>0%</td><td>치료 종결까지</td><td>병원 신청</td></tr>
+ <tr><td>중증치매</td><td>10%</td><td>5년</td><td>병원 신청</td></tr>
+</table>
+<p>급여 항목에만 적용, 비급여·식대·상급병실료 제외. 해당 질환 관련 진료에만 적용되므로 합병증 치료도 해당 상병 코딩 필요. <b>등록일부터 적용(소급 제한)</b> — 진단 즉시 등록이 원무과 핵심 업무.</p>
+
+<h3>3-5. 암환자·희귀질환자 의료비 (보건소)</h3>
+<ul>
+ <li><b>성인 암환자</b>: 의료급여수급자·차상위 본인부담경감자 → 전 암종, 급여·비급여 구분 없이 연 300만 원, 연속 3년. 건강보험가입자 신규지원은 2021.6.30 종료(한시 적용자만). 소아암은 백혈병 3,000만·기타 2,000만 원.</li>
+ <li><b>희귀질환자</b>: 산정특례 등록 + 소득·재산 기준(2026 희귀질환 중위 140%: 1인 359만·4인 909만 원). 2026년부터 부양의무자 소득기준 폐지. 산정특례 등록(병원) → 보건소 신청 → 공단 지급.</li>
+</ul>
+
+<h3>3-6. 노인 인공관절 · 치매 · 65세 이상 혜택</h3>
+<ul>
+ <li><b>인공관절</b>: 60세 이상 수급자·차상위·한부모. 한쪽 120만 원 한도 실비(검사·진료·수술비, 비급여 일부 포함), 양쪽 240만 원. 보건소 연중 접수, 예산 소진 시 조기 마감. <b>수술 전 사전신청 필수</b>.</li>
+ <li><b>치매</b>: 선별검사 무료(보건소·치매안심센터), 감별검사비 8~11만 원(60세+, 중위 120% 이하), 치료관리비 월 3만 원은 지자체별 — 남양주시 <span class="todo">[확인 필요]</span>.</li>
+ <li><b>65세+</b>: 폐렴구균 1회 무료, 임플란트 평생 2개·틀니 7년 1회 본인부담 30%(의료급여 5%).</li>
+</ul>
+
+<h3>3-7. 의료급여 수급자 본인부담 보상·상한</h3>
+<p>외래 1회 본인부담 최대 2만 원, 약국 5천 원, 월 5만 원 상한 유지. 30일간 1종 2만 원 초과·2종 20만 원 초과 시 초과분의 50% 환급 신청 가능. 원무과는 수급자 청구 시 상한 적용 여부를 확인한다.</p>
+
+<h2>4. 원내 업무 흐름 (외래 → 원무과 → 퇴원)</h2>
+<div class="flow">
+ <div class="step"><b>① 외래 스크리닝</b>간호사 카드 체크 → EMR 메모</div>
+ <div class="step"><b>② 원무과 1차 상담</b>수급자격·예상 본인부담 확인, 제도 매칭</div>
+ <div class="step"><b>③ 즉시 등록</b>산정특례·긴급복지(입원 중) 신청</div>
+ <div class="step"><b>④ 퇴원 전 서류</b>세부내역서·진단서·입퇴원확인서 발급</div>
+ <div class="step"><b>⑤ 기한 고지</b>180일(재난적)·30일(무한돌봄) 문서 고지</div>
+ <div class="step"><b>⑥ 카톡 발송</b>환자용 안내책자 PDF 전송 + 2주 후 확인 전화</div>
+</div>
+
+<h3>서류 체크리스트 (원무과 발급)</h3>
+<table>
+ <tr><th>서류</th><th>재난적</th><th>긴급복지·무한돌봄</th><th>산정특례</th><th>암·희귀(보건소)</th><th>인공관절</th></tr>
+ <tr><td>진료비 계산서·영수증</td><td>●</td><td>●</td><td></td><td>● 원본</td><td>●</td></tr>
+ <tr><td>비급여 세부내역서 (급여/전액본인부담/비급여/1인실/도수 구분)</td><td>●</td><td>●</td><td></td><td>●</td><td>●</td></tr>
+ <tr><td>진단서·소견서 (상병코드 기재)</td><td>●</td><td>●</td><td>산정특례 등록신청서</td><td>● 최종진단일·코드</td><td>● 수술 필요 소견</td></tr>
+ <tr><td>입퇴원확인서·진료확인서</td><td>●</td><td>●</td><td></td><td></td><td></td></tr>
+ <tr><td>환자 준비: 신분증·통장사본·실손 지급내역·가족관계</td><td>●</td><td>●</td><td></td><td>●</td><td>●</td></tr>
+</table>
+
+<h3>연락처 (게시용)</h3>
+<table>
+ <tr><th style="width:32%">기관</th><th>연락처</th><th>용도</th></tr>
+ <tr><td>국민건강보험공단 남양주가평지사</td><td>1577-1000 / 031-590-7200 · 남양주시 다산지금로163번길 87</td><td>재난적 의료비, 상한제, 산정특례</td></tr>
+ <tr><td>보건복지상담센터</td><td>☎ 129</td><td>긴급복지 신고·전 제도 상담</td></tr>
+ <tr><td>경기도 긴급복지 핫라인</td><td>☎ 031-120</td><td>경기도 무한돌봄</td></tr>
+ <tr><td>남양주시 보건소 (남양주·풍양·동부)</td><td><span class="todo">[대표번호 확인 기입]</span></td><td>암·희귀·치매·인공관절·접종</td></tr>
+ <tr><td>거주지 읍면동 행정복지센터</td><td>—</td><td>긴급복지·무한돌봄 신청</td></tr>
+ <tr><td>복지로 bokjiro.go.kr</td><td>온라인</td><td>지역별 조건 확인</td></tr>
+ <tr><td>NDB 원무과 / 의료사회복지</td><td><span class="todo">[내선 기입]</span></td><td>원내 상담 창구</td></tr>
+</table>
+
+<h2>5. 상담 FAQ</h2>
+<div class="box">
+<p class="q">Q. 비급여도 지원되나요?</p><p>A. 재난적 의료비·무한돌봄·암환자(수급자)·인공관절은 비급여 일부 포함. 상한제·산정특례·암환자(건보)는 급여만.</p>
+<p class="q">Q. 실손보험 있으면 못 받나요?</p><p>A. 받을 수 있습니다. 실손 지급액을 뺀 나머지가 대상입니다.</p>
+<p class="q">Q. 소득이 기준을 넘는데요?</p><p>A. 재난적 의료비는 중위 200%까지 개별심사, 무한돌봄은 100%까지. 공단·129 상담을 권합니다.</p>
+<p class="q">Q. 여러 제도를 동시에 받을 수 있나요?</p><p>A. 상한제(급여)+재난적(비급여)은 병행 가능. 같은 항목 중복 수령은 안 되며, 타 지원금은 차감됩니다.</p>
+<p class="q">Q. 병원이 대신 신청해 주나요?</p><p>A. 신청은 환자·보호자가 직접. 병원은 서류 발급·산정특례 등록·기한 안내를 책임집니다.</p>
+</div>
+
+<h2>6. 직원 행동 원칙</h2>
+<div class="warn"><ul>
+ <li><b>가능성 안내, 금액 약속 금지</b> — 판정은 공단·지자체. "대상이 될 수 있습니다"까지.</li>
+ <li><b>기한은 문서로</b> — 재난적 180일, 무한돌봄 퇴원 30일, 인공관절 수술 전, 상한제 3년.</li>
+ <li><b>산정특례는 진단 당일 등록</b> — 소급이 안 되므로 늦으면 환자 손해.</li>
+ <li><b>세부내역서 항목 구분</b> — 급여/전액본인부담/비급여/1인실/도수치료 분리 발급.</li>
+ <li><b>분기 1회 기준 갱신</b> — 원무팀이 공단·경기도·남양주시 고시 확인 후 본 매뉴얼·환자책자 개정.</li>
+</ul></div>
+
+<div class="ftr">출처: 국민건강보험공단·보건복지부(정책브리핑)·경기도청·시군 보건소 공개자료, 조선일보 2026.09.05 보도. 수치는 2026년 9월 기준이며 제도 개정·지자체 조례에 따라 달라질 수 있음. <span class="todo">[확인 필요]</span> 표시 항목은 원무팀 확인 후 기입. · 남양주백병원 · 작성: 병원장실</div>
+</body></html>

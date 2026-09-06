@@ -1,0 +1,14 @@
+{
+  "note": "상병코드 접두어 → 산정특례 질환군. 정확한 판정은 공단 등록 기준(V코드) 우선. 코드가 없으면 LLM이 서술로 후보 제시 후 review.",
+  "prefix_map": {
+    "C": "cancer", "D0": "cancer", "D37": "cancer", "D45": "cancer", "D46": "cancer", "D47": "cancer",
+    "I60": "cerebrovascular", "I61": "cerebrovascular", "I62": "cerebrovascular", "I63": "cerebrovascular", "I64": "cerebrovascular", "I67.1": "cerebrovascular",
+    "I20": "cardiac", "I21": "cardiac", "I22": "cardiac", "I24": "cardiac", "I25": "cardiac", "I33": "cardiac", "I35": "cardiac", "I42": "cardiac", "I71": "cardiac",
+    "T20": "severe_burn", "T21": "severe_burn", "T22": "severe_burn", "T23": "severe_burn", "T24": "severe_burn", "T25": "severe_burn", "T29": "severe_burn", "T30": "severe_burn", "T31": "severe_burn",
+    "A15": "tuberculosis", "A16": "tuberculosis", "A17": "tuberculosis", "A18": "tuberculosis", "A19": "tuberculosis",
+    "M45": "intractable", "M05": "intractable", "M06": "intractable", "M32": "intractable", "M33": "intractable", "M34": "intractable", "G35": "intractable", "G20": "intractable", "G70": "intractable", "K50": "intractable", "K51": "intractable", "N18.5": "intractable",
+    "G12": "rare", "G71": "rare", "E84": "rare", "D66": "rare", "D67": "rare", "Q": "rare",
+    "F00": "severe_dementia", "F01": "severe_dementia", "F02": "severe_dementia", "F03": "severe_dementia", "G30": "severe_dementia"
+  },
+  "severe_trauma_note": "중증외상(ISS≥15 등)은 코드가 아닌 중증도 기준 → encounter.flags.severe_trauma=true 로 입력"
+}

@@ -1,0 +1,39 @@
+{
+ "description": "45세 남, 직장가입 중위 70%, 중증외상 응급수술, 주소득자, 4인가구",
+ "patient": {
+  "name": "D",
+  "age": 45,
+  "household_size": 4,
+  "income_pct": 70,
+  "assets": 120000000,
+  "is_main_earner": true
+ },
+ "encounter": {
+  "department": "surgery",
+  "setting": "inpatient",
+  "diagnosis_codes": [
+   "S36.0"
+  ],
+  "flags": {
+   "severe_trauma": true
+  },
+  "surgery": true,
+  "surgery_done": true,
+  "admission_date": "2026-08-10",
+  "discharge_date": "2026-08-30",
+  "costs": {
+   "covered_copay": 3000000,
+   "full_self_pay": 800000,
+   "noncovered": 9000000
+  }
+ },
+ "expected": {
+  "special_disease": "eligible",
+  "emergency_welfare_national": "eligible",
+  "living_support": "eligible",
+  "emergency_welfare_gyeonggi": "eligible",
+  "catastrophic_medical": "eligible",
+  "senior65_benefits": "ineligible",
+  "cancer_aid": "ineligible"
+ }
+}

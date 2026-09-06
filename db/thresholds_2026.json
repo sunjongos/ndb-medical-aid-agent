@@ -1,0 +1,319 @@
+{
+  "year": 2026,
+  "updated": "2026-09-05",
+  "sources": [
+    "보건복지부 정책브리핑 재난적의료비 지원사업",
+    "국민건강보험공단 본인부담상한제 2026 고시",
+    "경기도청 긴급복지·경기도형 긴급복지(무한돌봄) 안내",
+    "시군 보건소 암환자·희귀질환자·노인 인공관절 의료비 지원 안내"
+  ],
+  "median_income_monthly": {
+    "1": 2564238,
+    "2": 4199292,
+    "3": 5359036,
+    "4": 6494738,
+    "5": 7556719,
+    "6": 8555952,
+    "per_additional_member": 999214
+  },
+  "catastrophic": {
+    "asset_cap": 700000000,
+    "annual_cap": 50000000,
+    "deadline_days_after_last_visit": 180,
+    "bands": [
+      {
+        "id": "basic",
+        "label": "기초수급자·차상위",
+        "income_pct_max": null,
+        "requires_beneficiary": true,
+        "burden_min": 800000,
+        "rate": 0.8
+      },
+      {
+        "id": "le50",
+        "label": "기준중위소득 50% 이하",
+        "income_pct_max": 50,
+        "burden_min": 1600000,
+        "burden_min_single": 1200000,
+        "rate": 0.7
+      },
+      {
+        "id": "le100",
+        "label": "기준중위소득 50~100%",
+        "income_pct_max": 100,
+        "burden_income_ratio": 0.1,
+        "rate": 0.6
+      },
+      {
+        "id": "le200",
+        "label": "기준중위소득 100~200% (개별심사)",
+        "income_pct_max": 200,
+        "burden_income_ratio": 0.2,
+        "rate": 0.5,
+        "individual_review": true
+      }
+    ],
+    "outpatient_allowed_categories": [
+      "cancer",
+      "cerebrovascular",
+      "cardiac",
+      "rare",
+      "intractable",
+      "severe_burn"
+    ],
+    "excluded_cost_keys": [
+      "manual_therapy",
+      "single_room"
+    ]
+  },
+  "copay_ceiling": {
+    "note": "2026년 진료분 소득분위별 본인부담상한액(급여 본인부담 합계 기준). 분위는 건강보험료로 판정.",
+    "claim_years": 3,
+    "decile_caps": {
+      "1": 900000,
+      "2-3": 1120000,
+      "4-5": 1730000,
+      "6-7": 3260000,
+      "8": 4460000,
+      "9": 5360000,
+      "10": 8430000
+    }
+  },
+  "emergency_welfare_national": {
+    "income_pct_max": 75,
+    "asset_cap_by_area": {
+      "metro": 241000000,
+      "city": 152000000,
+      "rural": 130000000
+    },
+    "financial_asset_base": 6000000,
+    "medical_cap": 3000000,
+    "medical_times": 2,
+    "living_monthly": {
+      "1": 783000,
+      "2": 1286600,
+      "3": 1644000,
+      "4": 1994600
+    },
+    "living_months_max": 6,
+    "crisis_events": [
+      "main_earner_death_or_missing",
+      "main_earner_serious_illness",
+      "job_loss",
+      "business_closure",
+      "neglect_abuse",
+      "domestic_violence",
+      "fire_disaster",
+      "divorce_income_drop",
+      "power_cut",
+      "other_local_ordinance"
+    ]
+  },
+  "emergency_welfare_gyeonggi": {
+    "income_pct_max": 100,
+    "asset_cap_by_area": {
+      "special_city": 372000000,
+      "city": 310000000,
+      "county": 194000000
+    },
+    "financial_asset_base": 12000000,
+    "medical_noncovered_cap": 3000000,
+    "medical_times": 2,
+    "caregiver_cap": 3000000,
+    "caregiver_times": 1,
+    "chemo_cap": 1000000,
+    "chemo_times": 3,
+    "deadline_days_after_discharge": 30,
+    "extra_crisis_events": [
+      "caregiving_income_loss",
+      "excessive_debt"
+    ]
+  },
+  "special_disease": {
+    "cancer": {
+      "rate": 0.05,
+      "years": 5,
+      "self_register": true
+    },
+    "cerebrovascular": {
+      "rate": 0.05,
+      "days": 30,
+      "self_register": false
+    },
+    "cardiac": {
+      "rate": 0.05,
+      "days": 30,
+      "self_register": false
+    },
+    "severe_trauma": {
+      "rate": 0.05,
+      "days": 30,
+      "self_register": false
+    },
+    "rare": {
+      "rate": 0.1,
+      "years": 5,
+      "self_register": true,
+      "planned_rate": 0.05,
+      "planned_from": "2026-H2"
+    },
+    "intractable": {
+      "rate": 0.1,
+      "years": 5,
+      "self_register": true,
+      "planned_rate": 0.05,
+      "planned_from": "2026-H2"
+    },
+    "severe_burn": {
+      "rate": 0.05,
+      "years": 1,
+      "self_register": true
+    },
+    "tuberculosis": {
+      "rate": 0.0,
+      "self_register": true
+    },
+    "severe_dementia": {
+      "rate": 0.1,
+      "years": 5,
+      "self_register": true
+    }
+  },
+  "cancer_aid": {
+    "beneficiary_required": [
+      "medical_aid_1",
+      "medical_aid_2",
+      "near_poor"
+    ],
+    "annual_cap": 3000000,
+    "years": 3,
+    "nhi_new_applications_closed_since": "2021-06-30"
+  },
+  "rare_disease_aid": {
+    "income_pct_max": 140,
+    "requires_special_disease": "rare"
+  },
+  "knee_replacement": {
+    "age_min": 60,
+    "beneficiary_required": [
+      "basic",
+      "near_poor",
+      "medical_aid_1",
+      "medical_aid_2",
+      "single_parent"
+    ],
+    "cap_per_knee": 1200000,
+    "cap_both": 2400000,
+    "must_apply_before_surgery": true,
+    "region_city": "남양주시"
+  },
+  "dementia": {
+    "age_min": 60,
+    "income_pct_max": 120,
+    "differential_test_aid": [
+      80000,
+      110000
+    ],
+    "management_monthly": 30000,
+    "management_annual": 360000,
+    "local_programs_confirmed": [
+      "서울 동작구",
+      "인천 계양구",
+      "대전"
+    ],
+    "namyangju_status": "UNCONFIRMED"
+  },
+  "senior65": {
+    "age_min": 65,
+    "pneumococcal_free": true,
+    "implant_copay": 0.3,
+    "implant_count_lifetime": 2,
+    "denture_copay": 0.3,
+    "denture_interval_years": 7,
+    "denture_copay_medical_aid": 0.05
+  },
+  "medical_aid_copay": {
+    "outpatient_visit_cap": 20000,
+    "pharmacy_cap": 5000,
+    "monthly_cap": 50000,
+    "refund_threshold_30d": {
+      "medical_aid_1": 20000,
+      "medical_aid_2": 200000
+    },
+    "refund_rate": 0.5
+  },
+  "contacts": {
+    "nhis_namyangju": {
+      "name": "국민건강보험공단 남양주가평지사",
+      "tel": "1577-1000 / 031-590-7200",
+      "addr": "경기도 남양주시 다산지금로163번길 87"
+    },
+    "welfare_129": {
+      "name": "보건복지상담센터",
+      "tel": "129"
+    },
+    "gyeonggi_hotline": {
+      "name": "경기도 긴급복지 핫라인",
+      "tel": "031-120"
+    },
+    "namyangju_health_center": {
+      "name": "남양주시 보건소",
+      "tel": "[확인 필요]"
+    },
+    "ndb_admin": {
+      "name": "남양주백병원 원무과",
+      "tel": "[내선 기입]"
+    }
+  },
+  "verification": {
+    "note": "verified=true 인 섹션만 공단·복지부·경기도 원문과 대조 완료. false 섹션은 판정 시 '수치 미검증' 경고를 붙여 likely로 강등한다.",
+    "median_income_monthly": {
+      "verified": true,
+      "source": "경기도청 경기도형 긴급복지 선정기준(2026)"
+    },
+    "catastrophic": {
+      "verified": true,
+      "source": "정책브리핑 재난적의료비 지원사업 / 공단"
+    },
+    "copay_ceiling": {
+      "verified": false,
+      "source": "민간 정리자료(공단 고시 원문 대조 필요)"
+    },
+    "emergency_welfare_national": {
+      "verified": true,
+      "source": "경기도청 긴급복지(국가형) 안내"
+    },
+    "emergency_welfare_gyeonggi": {
+      "verified": true,
+      "source": "경기도청 경기도형 긴급복지"
+    },
+    "special_disease": {
+      "verified": true,
+      "source": "공단 산정특례 안내(2026-06) + 복지부 1/5 발표"
+    },
+    "cancer_aid": {
+      "verified": true,
+      "source": "시군 보건소 암환자 의료비 지원 안내(2026)"
+    },
+    "rare_disease_aid": {
+      "verified": false,
+      "source": "영도구 보건소 2026 기준표(남양주 확인 필요)"
+    },
+    "knee_replacement": {
+      "verified": false,
+      "source": "타 지자체 보건소 안내(남양주시 조건 확인 필요)"
+    },
+    "dementia": {
+      "verified": false,
+      "source": "조선일보 보도 요약"
+    },
+    "senior65": {
+      "verified": true,
+      "source": "공단 노인 임플란트·틀니 급여기준"
+    },
+    "medical_aid_copay": {
+      "verified": false,
+      "source": "복지평론 요약(의료급여 고시 대조 필요)"
+    }
+  }
+}

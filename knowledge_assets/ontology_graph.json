@@ -1,0 +1,992 @@
+{
+ "meta": {
+  "source": "wiki/programs/*.md frontmatter",
+  "generated": "2026-09-06",
+  "engine": "agent/kb.py KB()",
+  "schema": "vis-network nodes/edges"
+ },
+ "nodes": [
+  {
+   "id": "cancer_aid",
+   "label": "암환자 의료비 지원 (보건소)",
+   "group": "program"
+  },
+  {
+   "id": "level:national_local",
+   "label": "national_local",
+   "group": "level"
+  },
+  {
+   "id": "agency:남양주시 보건소",
+   "label": "남양주시 보건소",
+   "group": "agency"
+  },
+  {
+   "id": "fact:special_category",
+   "label": "special_category",
+   "group": "fact"
+  },
+  {
+   "id": "fact:beneficiary",
+   "label": "beneficiary",
+   "group": "fact"
+  },
+  {
+   "id": "thr:cancer_aid.beneficiary_required",
+   "label": "cancer_aid.beneficiary_required",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:cancer_aid_amount",
+   "label": "cancer_aid_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "dept:internal",
+   "label": "internal",
+   "group": "department"
+  },
+  {
+   "id": "dept:surgery",
+   "label": "surgery",
+   "group": "department"
+  },
+  {
+   "id": "catastrophic_medical",
+   "label": "재난적 의료비 지원사업",
+   "group": "program"
+  },
+  {
+   "id": "level:national",
+   "label": "national",
+   "group": "level"
+  },
+  {
+   "id": "agency:국민건강보험공단",
+   "label": "국민건강보험공단",
+   "group": "agency"
+  },
+  {
+   "id": "fact:assets",
+   "label": "assets",
+   "group": "fact"
+  },
+  {
+   "id": "thr:catastrophic.asset_cap",
+   "label": "catastrophic.asset_cap",
+   "group": "threshold"
+  },
+  {
+   "id": "fact:setting_ok_for_catastrophic",
+   "label": "setting_ok_for_catastrophic",
+   "group": "fact"
+  },
+  {
+   "id": "thr:catastrophic.bands",
+   "label": "catastrophic.bands",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:catastrophic_amount",
+   "label": "catastrophic_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "dept:spine",
+   "label": "spine",
+   "group": "department"
+  },
+  {
+   "id": "dept:joint",
+   "label": "joint",
+   "group": "department"
+  },
+  {
+   "id": "dept:neuro",
+   "label": "neuro",
+   "group": "department"
+  },
+  {
+   "id": "copay_ceiling",
+   "label": "본인부담상한제",
+   "group": "program"
+  },
+  {
+   "id": "fact:insurance",
+   "label": "insurance",
+   "group": "fact"
+  },
+  {
+   "id": "thr:copay_ceiling_amount",
+   "label": "copay_ceiling_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "dementia_aid",
+   "label": "치매 검진비·치료관리비",
+   "group": "program"
+  },
+  {
+   "id": "agency:보건소·치매안심센터",
+   "label": "보건소·치매안심센터",
+   "group": "agency"
+  },
+  {
+   "id": "fact:age",
+   "label": "age",
+   "group": "fact"
+  },
+  {
+   "id": "thr:dementia.age_min",
+   "label": "dementia.age_min",
+   "group": "threshold"
+  },
+  {
+   "id": "fact:cognitive_concern",
+   "label": "cognitive_concern",
+   "group": "fact"
+  },
+  {
+   "id": "fact:income_pct",
+   "label": "income_pct",
+   "group": "fact"
+  },
+  {
+   "id": "thr:dementia.income_pct_max",
+   "label": "dementia.income_pct_max",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:dementia_amount",
+   "label": "dementia_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "emergency_welfare_gyeonggi",
+   "label": "경기도형 긴급복지 (무한돌봄)",
+   "group": "program"
+  },
+  {
+   "id": "level:province",
+   "label": "province",
+   "group": "level"
+  },
+  {
+   "id": "agency:경기도·읍면동 행정복지센터",
+   "label": "경기도·읍면동 행정복지센터",
+   "group": "agency"
+  },
+  {
+   "id": "fact:region_gyeonggi",
+   "label": "region_gyeonggi",
+   "group": "fact"
+  },
+  {
+   "id": "thr:emergency_welfare_gyeonggi.income_pct_max",
+   "label": "emergency_welfare_gyeonggi.income_pct_max",
+   "group": "threshold"
+  },
+  {
+   "id": "fact:has_crisis_event_gg",
+   "label": "has_crisis_event_gg",
+   "group": "fact"
+  },
+  {
+   "id": "thr:emergency_welfare_gyeonggi.asset_cap_by_area.city",
+   "label": "emergency_welfare_gyeonggi.asset_cap_by_area.city",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:emergency_gyeonggi_amount",
+   "label": "emergency_gyeonggi_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "emergency_welfare_national",
+   "label": "긴급복지 의료지원 (국가형)",
+   "group": "program"
+  },
+  {
+   "id": "agency:보건복지부·읍면동 행정복지센터",
+   "label": "보건복지부·읍면동 행정복지센터",
+   "group": "agency"
+  },
+  {
+   "id": "thr:emergency_welfare_national.income_pct_max",
+   "label": "emergency_welfare_national.income_pct_max",
+   "group": "threshold"
+  },
+  {
+   "id": "fact:has_crisis_event",
+   "label": "has_crisis_event",
+   "group": "fact"
+  },
+  {
+   "id": "thr:emergency_welfare_national.asset_cap_by_area.city",
+   "label": "emergency_welfare_national.asset_cap_by_area.city",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:emergency_national_amount",
+   "label": "emergency_national_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "knee_replacement",
+   "label": "노인 무릎 인공관절 수술비 지원",
+   "group": "program"
+  },
+  {
+   "id": "level:local",
+   "label": "local",
+   "group": "level"
+  },
+  {
+   "id": "thr:knee_replacement.age_min",
+   "label": "knee_replacement.age_min",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:knee_replacement.beneficiary_required",
+   "label": "knee_replacement.beneficiary_required",
+   "group": "threshold"
+  },
+  {
+   "id": "fact:procedure_knee_replacement",
+   "label": "procedure_knee_replacement",
+   "group": "fact"
+  },
+  {
+   "id": "fact:surgery_done",
+   "label": "surgery_done",
+   "group": "fact"
+  },
+  {
+   "id": "fact:region_city",
+   "label": "region_city",
+   "group": "fact"
+  },
+  {
+   "id": "thr:knee_replacement.region_city",
+   "label": "knee_replacement.region_city",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:knee_amount",
+   "label": "knee_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "living_support",
+   "label": "긴급복지 생계지원",
+   "group": "program"
+  },
+  {
+   "id": "agency:읍면동 행정복지센터",
+   "label": "읍면동 행정복지센터",
+   "group": "agency"
+  },
+  {
+   "id": "thr:living_amount",
+   "label": "living_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "medical_aid_copay_refund",
+   "label": "의료급여 본인부담 상한·보상금",
+   "group": "program"
+  },
+  {
+   "id": "thr:medical_aid_refund_amount",
+   "label": "medical_aid_refund_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "rare_disease_aid",
+   "label": "희귀질환자 의료비 지원",
+   "group": "program"
+  },
+  {
+   "id": "agency:남양주시 보건소 → 공단 지급",
+   "label": "남양주시 보건소 → 공단 지급",
+   "group": "agency"
+  },
+  {
+   "id": "thr:rare_disease_aid.income_pct_max",
+   "label": "rare_disease_aid.income_pct_max",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:rare_disease_amount",
+   "label": "rare_disease_amount",
+   "group": "amount_fn"
+  },
+  {
+   "id": "senior65_benefits",
+   "label": "65세 이상 예방접종·치과 혜택",
+   "group": "program"
+  },
+  {
+   "id": "agency:보건소·지정 의료기관",
+   "label": "보건소·지정 의료기관",
+   "group": "agency"
+  },
+  {
+   "id": "thr:senior65.age_min",
+   "label": "senior65.age_min",
+   "group": "threshold"
+  },
+  {
+   "id": "thr:none",
+   "label": "none",
+   "group": "amount_fn"
+  },
+  {
+   "id": "special_disease",
+   "label": "본인일부부담금 산정특례",
+   "group": "program"
+  },
+  {
+   "id": "agency:국민건강보험공단 (병원 등록)",
+   "label": "국민건강보험공단 (병원 등록)",
+   "group": "agency"
+  },
+  {
+   "id": "thr:special_disease_amount",
+   "label": "special_disease_amount",
+   "group": "amount_fn"
+  }
+ ],
+ "edges": [
+  {
+   "from": "cancer_aid",
+   "to": "level:national_local",
+   "label": "level"
+  },
+  {
+   "from": "cancer_aid",
+   "to": "agency:남양주시 보건소",
+   "label": "agency"
+  },
+  {
+   "from": "cancer_aid",
+   "to": "fact:special_category",
+   "label": "hard:eq"
+  },
+  {
+   "from": "cancer_aid",
+   "to": "fact:beneficiary",
+   "label": "hard:in"
+  },
+  {
+   "from": "fact:beneficiary",
+   "to": "thr:cancer_aid.beneficiary_required",
+   "label": "ref"
+  },
+  {
+   "from": "cancer_aid",
+   "to": "thr:cancer_aid_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:internal",
+   "to": "cancer_aid",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "cancer_aid",
+   "label": "covers"
+  },
+  {
+   "from": "catastrophic_medical",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "catastrophic_medical",
+   "to": "agency:국민건강보험공단",
+   "label": "agency"
+  },
+  {
+   "from": "catastrophic_medical",
+   "to": "fact:assets",
+   "label": "hard:lte"
+  },
+  {
+   "from": "fact:assets",
+   "to": "thr:catastrophic.asset_cap",
+   "label": "ref"
+  },
+  {
+   "from": "catastrophic_medical",
+   "to": "fact:setting_ok_for_catastrophic",
+   "label": "hard:eq"
+  },
+  {
+   "from": "catastrophic_medical",
+   "to": "thr:catastrophic.bands",
+   "label": "band"
+  },
+  {
+   "from": "catastrophic_medical",
+   "to": "thr:catastrophic_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "catastrophic_medical",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "catastrophic_medical",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "catastrophic_medical",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "catastrophic_medical",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "catastrophic_medical",
+   "label": "covers"
+  },
+  {
+   "from": "copay_ceiling",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "copay_ceiling",
+   "to": "agency:국민건강보험공단",
+   "label": "agency"
+  },
+  {
+   "from": "copay_ceiling",
+   "to": "fact:insurance",
+   "label": "hard:in"
+  },
+  {
+   "from": "copay_ceiling",
+   "to": "thr:copay_ceiling_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "copay_ceiling",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "copay_ceiling",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "copay_ceiling",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "copay_ceiling",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "copay_ceiling",
+   "label": "covers"
+  },
+  {
+   "from": "dementia_aid",
+   "to": "level:national_local",
+   "label": "level"
+  },
+  {
+   "from": "dementia_aid",
+   "to": "agency:보건소·치매안심센터",
+   "label": "agency"
+  },
+  {
+   "from": "dementia_aid",
+   "to": "fact:age",
+   "label": "hard:gte"
+  },
+  {
+   "from": "fact:age",
+   "to": "thr:dementia.age_min",
+   "label": "ref"
+  },
+  {
+   "from": "dementia_aid",
+   "to": "fact:cognitive_concern",
+   "label": "hard:eq"
+  },
+  {
+   "from": "dementia_aid",
+   "to": "fact:income_pct",
+   "label": "soft:lte"
+  },
+  {
+   "from": "fact:income_pct",
+   "to": "thr:dementia.income_pct_max",
+   "label": "ref"
+  },
+  {
+   "from": "dementia_aid",
+   "to": "thr:dementia_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "dementia_aid",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "dementia_aid",
+   "label": "covers"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "level:province",
+   "label": "level"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "agency:경기도·읍면동 행정복지센터",
+   "label": "agency"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "fact:region_gyeonggi",
+   "label": "hard:eq"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "fact:income_pct",
+   "label": "hard:lte"
+  },
+  {
+   "from": "fact:income_pct",
+   "to": "thr:emergency_welfare_gyeonggi.income_pct_max",
+   "label": "ref"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "fact:has_crisis_event_gg",
+   "label": "hard:eq"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "fact:assets",
+   "label": "soft:lte"
+  },
+  {
+   "from": "fact:assets",
+   "to": "thr:emergency_welfare_gyeonggi.asset_cap_by_area.city",
+   "label": "ref"
+  },
+  {
+   "from": "emergency_welfare_gyeonggi",
+   "to": "thr:emergency_gyeonggi_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "emergency_welfare_gyeonggi",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "emergency_welfare_gyeonggi",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "emergency_welfare_gyeonggi",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "emergency_welfare_gyeonggi",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "emergency_welfare_gyeonggi",
+   "label": "covers"
+  },
+  {
+   "from": "emergency_welfare_national",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "emergency_welfare_national",
+   "to": "agency:보건복지부·읍면동 행정복지센터",
+   "label": "agency"
+  },
+  {
+   "from": "emergency_welfare_national",
+   "to": "fact:income_pct",
+   "label": "hard:lte"
+  },
+  {
+   "from": "fact:income_pct",
+   "to": "thr:emergency_welfare_national.income_pct_max",
+   "label": "ref"
+  },
+  {
+   "from": "emergency_welfare_national",
+   "to": "fact:has_crisis_event",
+   "label": "hard:eq"
+  },
+  {
+   "from": "emergency_welfare_national",
+   "to": "fact:assets",
+   "label": "soft:lte"
+  },
+  {
+   "from": "fact:assets",
+   "to": "thr:emergency_welfare_national.asset_cap_by_area.city",
+   "label": "ref"
+  },
+  {
+   "from": "emergency_welfare_national",
+   "to": "thr:emergency_national_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "emergency_welfare_national",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "emergency_welfare_national",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "emergency_welfare_national",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "emergency_welfare_national",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "emergency_welfare_national",
+   "label": "covers"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "level:local",
+   "label": "level"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "agency:남양주시 보건소",
+   "label": "agency"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "fact:age",
+   "label": "hard:gte"
+  },
+  {
+   "from": "fact:age",
+   "to": "thr:knee_replacement.age_min",
+   "label": "ref"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "fact:beneficiary",
+   "label": "hard:in"
+  },
+  {
+   "from": "fact:beneficiary",
+   "to": "thr:knee_replacement.beneficiary_required",
+   "label": "ref"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "fact:procedure_knee_replacement",
+   "label": "hard:eq"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "fact:surgery_done",
+   "label": "hard:eq"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "fact:region_city",
+   "label": "soft:eq"
+  },
+  {
+   "from": "fact:region_city",
+   "to": "thr:knee_replacement.region_city",
+   "label": "ref"
+  },
+  {
+   "from": "knee_replacement",
+   "to": "thr:knee_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:joint",
+   "to": "knee_replacement",
+   "label": "covers"
+  },
+  {
+   "from": "living_support",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "living_support",
+   "to": "agency:읍면동 행정복지센터",
+   "label": "agency"
+  },
+  {
+   "from": "living_support",
+   "to": "fact:income_pct",
+   "label": "hard:lte"
+  },
+  {
+   "from": "fact:income_pct",
+   "to": "thr:emergency_welfare_national.income_pct_max",
+   "label": "ref"
+  },
+  {
+   "from": "living_support",
+   "to": "fact:has_crisis_event",
+   "label": "hard:eq"
+  },
+  {
+   "from": "living_support",
+   "to": "thr:living_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "living_support",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "living_support",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "living_support",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "living_support",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "living_support",
+   "label": "covers"
+  },
+  {
+   "from": "medical_aid_copay_refund",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "medical_aid_copay_refund",
+   "to": "agency:국민건강보험공단",
+   "label": "agency"
+  },
+  {
+   "from": "medical_aid_copay_refund",
+   "to": "fact:beneficiary",
+   "label": "hard:in"
+  },
+  {
+   "from": "medical_aid_copay_refund",
+   "to": "thr:medical_aid_refund_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "medical_aid_copay_refund",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "medical_aid_copay_refund",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "medical_aid_copay_refund",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "medical_aid_copay_refund",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "medical_aid_copay_refund",
+   "label": "covers"
+  },
+  {
+   "from": "rare_disease_aid",
+   "to": "level:national_local",
+   "label": "level"
+  },
+  {
+   "from": "rare_disease_aid",
+   "to": "agency:남양주시 보건소 → 공단 지급",
+   "label": "agency"
+  },
+  {
+   "from": "rare_disease_aid",
+   "to": "fact:special_category",
+   "label": "hard:eq"
+  },
+  {
+   "from": "rare_disease_aid",
+   "to": "fact:income_pct",
+   "label": "hard:lte"
+  },
+  {
+   "from": "fact:income_pct",
+   "to": "thr:rare_disease_aid.income_pct_max",
+   "label": "ref"
+  },
+  {
+   "from": "rare_disease_aid",
+   "to": "thr:rare_disease_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:internal",
+   "to": "rare_disease_aid",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "rare_disease_aid",
+   "label": "covers"
+  },
+  {
+   "from": "dept:spine",
+   "to": "rare_disease_aid",
+   "label": "covers"
+  },
+  {
+   "from": "senior65_benefits",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "senior65_benefits",
+   "to": "agency:보건소·지정 의료기관",
+   "label": "agency"
+  },
+  {
+   "from": "senior65_benefits",
+   "to": "fact:age",
+   "label": "hard:gte"
+  },
+  {
+   "from": "fact:age",
+   "to": "thr:senior65.age_min",
+   "label": "ref"
+  },
+  {
+   "from": "senior65_benefits",
+   "to": "thr:none",
+   "label": "amount"
+  },
+  {
+   "from": "dept:spine",
+   "to": "senior65_benefits",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "senior65_benefits",
+   "label": "covers"
+  },
+  {
+   "from": "dept:internal",
+   "to": "senior65_benefits",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "senior65_benefits",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "senior65_benefits",
+   "label": "covers"
+  },
+  {
+   "from": "special_disease",
+   "to": "level:national",
+   "label": "level"
+  },
+  {
+   "from": "special_disease",
+   "to": "agency:국민건강보험공단 (병원 등록)",
+   "label": "agency"
+  },
+  {
+   "from": "special_disease",
+   "to": "fact:special_category",
+   "label": "hard:neq"
+  },
+  {
+   "from": "special_disease",
+   "to": "thr:special_disease_amount",
+   "label": "amount"
+  },
+  {
+   "from": "dept:internal",
+   "to": "special_disease",
+   "label": "covers"
+  },
+  {
+   "from": "dept:neuro",
+   "to": "special_disease",
+   "label": "covers"
+  },
+  {
+   "from": "dept:surgery",
+   "to": "special_disease",
+   "label": "covers"
+  },
+  {
+   "from": "dept:spine",
+   "to": "special_disease",
+   "label": "covers"
+  },
+  {
+   "from": "dept:joint",
+   "to": "special_disease",
+   "label": "covers"
+  }
+ ]
+}

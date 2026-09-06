@@ -1,0 +1,41 @@
+{
+ "description": "72세 남, 의료급여 2종, 1인, 대장암 수술 입원, 뇌경색 기왕, 인지저하",
+ "patient": {
+  "name": "B",
+  "age": 72,
+  "household_size": 1,
+  "beneficiary": "medical_aid_2",
+  "insurance": "medical_aid",
+  "assets": 40000000,
+  "is_main_earner": true,
+  "cognitive_concern": true
+ },
+ "encounter": {
+  "department": "internal",
+  "setting": "inpatient",
+  "diagnosis_codes": [
+   "C18.7",
+   "I63.9"
+  ],
+  "surgery": true,
+  "surgery_done": true,
+  "admission_date": "2026-08-25",
+  "discharge_date": "2026-09-03",
+  "costs": {
+   "covered_copay": 400000,
+   "full_self_pay": 200000,
+   "noncovered": 1500000
+  }
+ },
+ "expected": {
+  "special_disease": "eligible",
+  "cancer_aid": "eligible",
+  "catastrophic_medical": "eligible",
+  "emergency_welfare_national": "eligible",
+  "living_support": "eligible",
+  "medical_aid_copay_refund": "likely",
+  "dementia_aid": "likely",
+  "copay_ceiling": "ineligible",
+  "rare_disease_aid": "ineligible"
+ }
+}

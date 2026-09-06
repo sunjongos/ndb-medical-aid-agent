@@ -1,0 +1,31 @@
+{
+ "description": "40세 여, 중위 120%, 요통 외래 물리치료, 지원 없음 기대",
+ "patient": {
+  "name": "F",
+  "age": 40,
+  "household_size": 3,
+  "income_pct": 120,
+  "assets": 300000000
+ },
+ "encounter": {
+  "department": "spine",
+  "setting": "outpatient",
+  "diagnosis_codes": [
+   "M54.5"
+  ],
+  "last_visit_date": "2026-09-02",
+  "costs": {
+   "covered_copay": 40000,
+   "noncovered": 150000,
+   "manual_therapy": 150000
+  }
+ },
+ "expected": {
+  "catastrophic_medical": "ineligible",
+  "special_disease": "ineligible",
+  "emergency_welfare_national": "ineligible",
+  "emergency_welfare_gyeonggi": "ineligible",
+  "knee_replacement": "ineligible",
+  "senior65_benefits": "ineligible"
+ }
+}

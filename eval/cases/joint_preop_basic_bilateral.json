@@ -1,0 +1,31 @@
+{
+ "description": "66세 여, 기초수급, 양측 슬관절 치환술 수술 전 외래, 기억력 저하",
+ "patient": {
+  "name": "C",
+  "age": 66,
+  "household_size": 1,
+  "beneficiary": "basic",
+  "insurance": "medical_aid",
+  "cognitive_concern": true
+ },
+ "encounter": {
+  "department": "joint",
+  "setting": "outpatient",
+  "diagnosis_codes": [
+   "M17.0"
+  ],
+  "surgery": true,
+  "surgery_done": false,
+  "procedure_knee_replacement": true,
+  "knees": 2,
+  "last_visit_date": "2026-09-05",
+  "costs": {}
+ },
+ "expected": {
+  "knee_replacement": "likely",
+  "dementia_aid": "likely",
+  "senior65_benefits": "eligible",
+  "catastrophic_medical": "ineligible",
+  "cancer_aid": "ineligible"
+ }
+}

@@ -1,0 +1,9 @@
+output/
+__pycache__/
+*.pyc
+.pytest_cache/
+audit/
+*.png
+*.jpg
+*.jpeg
+!assets/*

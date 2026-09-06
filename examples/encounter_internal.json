@@ -1,0 +1,8 @@
+{
+  "department": "internal", "setting": "inpatient",
+  "diagnosis_codes": ["C18.7", "I63.9"], "diagnosis_text": "S상결장암, 뇌경색 기왕",
+  "surgery": true, "surgery_done": true,
+  "admission_date": "2026-08-25", "discharge_date": "2026-09-03",
+  "special_disease_registered": false,
+  "costs": {"covered_copay": 400000, "full_self_pay": 200000, "noncovered": 1500000}
+}

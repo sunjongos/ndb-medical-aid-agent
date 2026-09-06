@@ -1,0 +1,34 @@
+{
+  "version": "2026-09",
+  "retention": {
+    "emr_capture_days": 7,
+    "case_folder_days": 180,
+    "audit_log_days": 1825,
+    "note": "재난적 의료비 신청기한(180일)에 맞춰 케이스 폴더 보존. 화면 캡처는 확인 시트 승인 후 7일 내 삭제. 감사로그는 의료법 진료기록 보존 관행(5년)에 맞춤."
+  },
+  "phi_minimization": {
+    "audit_log_stores_name": false,
+    "audit_log_stores_phone": false,
+    "patient_key": "sha256(name|age|phone)[:16]",
+    "pdf_filename_uses_name": true
+  },
+  "roles": {
+    "nurse": ["screen", "extract"],
+    "admin_staff": ["confirm", "match", "render", "send"],
+    "social_worker": ["resolve"],
+    "director": ["verify_thresholds", "publish_wiki"]
+  },
+  "cds_hooks": {
+    "note": "EMR 연동 시 트리거 지점. 지금은 수동 실행이지만 동일한 이벤트명을 감사로그에 남긴다.",
+    "hooks": [
+      {"hook": "patient-view", "when": "외래 접수", "action": "간호사 30초 스크리닝 카드 표시"},
+      {"hook": "order-sign", "when": "수술·입원 결정", "action": "인공관절 사전신청·산정특례 등록 알림"},
+      {"hook": "encounter-discharge", "when": "퇴원 결정", "action": "match 실행 → staff_sheet + 환자 PDF, 180일 기한 고지"}
+    ]
+  },
+  "governance": {
+    "threshold_review_cycle_days": 90,
+    "requires_two_person_verification": true,
+    "change_log": "db/CHANGELOG.md"
+  }
+}

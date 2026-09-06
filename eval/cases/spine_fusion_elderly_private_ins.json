@@ -1,0 +1,40 @@
+{
+ "description": "68세 여, 지역가입, 중위 69%, 유합술 입원, 실손 400만, 배우자 간병으로 소득중단",
+ "patient": {
+  "name": "A",
+  "age": 68,
+  "household_size": 2,
+  "monthly_income": 2900000,
+  "assets": 250000000,
+  "insurance": "nhi_regional",
+  "caregiver_needed": true,
+  "private_insurance_paid": 4000000
+ },
+ "encounter": {
+  "department": "spine",
+  "setting": "inpatient",
+  "diagnosis_codes": [
+   "M48.06"
+  ],
+  "surgery": true,
+  "surgery_done": true,
+  "admission_date": "2026-08-20",
+  "discharge_date": "2026-09-01",
+  "costs": {
+   "covered_copay": 2500000,
+   "covered_copay_uncapped": 300000,
+   "full_self_pay": 500000,
+   "noncovered": 6000000,
+   "single_room": 600000
+  }
+ },
+ "expected": {
+  "catastrophic_medical": "eligible",
+  "emergency_welfare_gyeonggi": "eligible",
+  "senior65_benefits": "eligible",
+  "copay_ceiling": "likely",
+  "emergency_welfare_national": "ineligible",
+  "knee_replacement": "ineligible",
+  "special_disease": "ineligible"
+ }
+}

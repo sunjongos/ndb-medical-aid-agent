@@ -1,0 +1,9 @@
+{
+  "department": "spine", "setting": "inpatient",
+  "diagnosis_codes": ["M48.06", "M51.1"], "diagnosis_text": "요추관협착증, 요추 추간판탈출증 L4-5",
+  "procedure_text": "L4-5 후방 감압 및 유합술 (PLIF)", "surgery": true, "surgery_done": true,
+  "admission_date": "2026-08-20", "discharge_date": "2026-09-01",
+  "special_disease_registered": false,
+  "costs": {"covered_copay": 2500000, "covered_copay_uncapped": 300000, "full_self_pay": 500000,
+            "noncovered": 6000000, "single_room": 600000, "manual_therapy": 0, "total_billed": 18000000}
+}

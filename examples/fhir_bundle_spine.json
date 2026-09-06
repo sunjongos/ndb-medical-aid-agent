@@ -1,0 +1,20 @@
+{"resourceType":"Bundle","type":"collection","entry":[
+ {"resource":{"resourceType":"Patient","id":"p1","name":[{"text":"김순자"}],"gender":"female","birthDate":"1958-04-10",
+   "address":[{"state":"경기도","city":"남양주시"}],"telecom":[{"system":"phone","value":"010-0000-0000"}],
+   "extension":[{"url":"http://ndb.hospital/fhir/StructureDefinition/household-size","valueInteger":2}]}},
+ {"resource":{"resourceType":"Coverage","type":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/coverage-type","code":"nhi-regional"}]}}},
+ {"resource":{"resourceType":"Encounter","class":{"code":"IMP"},"serviceType":{"text":"척추센터"},"period":{"start":"2026-08-20","end":"2026-09-01"}}},
+ {"resource":{"resourceType":"Condition","code":{"coding":[{"system":"http://hl7.org/fhir/sid/icd-10","code":"M48.06"}],"text":"요추관협착증"}}},
+ {"resource":{"resourceType":"Procedure","status":"completed","code":{"text":"L4-5 후방 감압 및 유합술"}}},
+ {"resource":{"resourceType":"Claim","total":{"value":18000000},"item":[
+   {"category":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/cost-category","code":"covered-copay"}]},"net":{"value":2500000}},
+   {"category":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/cost-category","code":"covered-copay-uncapped"}]},"net":{"value":300000}},
+   {"category":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/cost-category","code":"full-self-pay"}]},"net":{"value":500000}},
+   {"category":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/cost-category","code":"noncovered"}]},"net":{"value":5400000}},
+   {"category":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/cost-category","code":"single-room"}]},"net":{"value":600000}}]}},
+ {"resource":{"resourceType":"Observation","code":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/sdoh","code":"monthly-income"}]},"valueMoney":{"value":2900000}}},
+ {"resource":{"resourceType":"Observation","code":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/sdoh","code":"assets"}]},"valueMoney":{"value":250000000}}},
+ {"resource":{"resourceType":"Observation","code":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/sdoh","code":"private-insurance-paid"}]},"valueMoney":{"value":4000000}}},
+ {"resource":{"resourceType":"Observation","code":{"coding":[{"system":"http://ndb.hospital/fhir/CodeSystem/sdoh","code":"caregiver-needed"}]},"valueBoolean":true}},
+ {"resource":{"resourceType":"AllergyIntolerance","code":{"text":"NSAID"}}}
+]}

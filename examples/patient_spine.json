@@ -1,0 +1,9 @@
+{
+  "name": "김순자", "age": 68, "sex": "F", "household_size": 2,
+  "monthly_income": 2900000, "assets": 250000000, "financial_assets": 8000000,
+  "beneficiary": "none", "insurance": "nhi_regional",
+  "region_province": "경기도", "region_city": "남양주시",
+  "is_main_earner": false, "crisis_events": [], "caregiver_needed": true,
+  "cognitive_concern": false, "private_insurance_paid": 4000000, "other_public_aid_received": 0,
+  "phone": "010-0000-0000", "notes": "배우자가 간병하느라 일용직 중단"
+}

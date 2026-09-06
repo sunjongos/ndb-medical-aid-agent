@@ -1,0 +1,29 @@
+{
+ "description": "63세 남, 직장가입 중위 150%, 파킨슨 외래, 산정특례 미등록",
+ "patient": {
+  "name": "E",
+  "age": 63,
+  "household_size": 2,
+  "income_pct": 150,
+  "assets": 500000000
+ },
+ "encounter": {
+  "department": "neuro",
+  "setting": "outpatient",
+  "diagnosis_codes": [
+   "G20"
+  ],
+  "last_visit_date": "2026-09-01",
+  "costs": {
+   "covered_copay": 300000,
+   "noncovered": 900000
+  }
+ },
+ "expected": {
+  "special_disease": "eligible",
+  "rare_disease_aid": "ineligible",
+  "catastrophic_medical": "ineligible",
+  "emergency_welfare_national": "ineligible",
+  "senior65_benefits": "ineligible"
+ }
+}

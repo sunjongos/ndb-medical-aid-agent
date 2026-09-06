@@ -1,0 +1,7 @@
+{
+  "name": "박영수", "age": 72, "sex": "M", "household_size": 1,
+  "beneficiary": "medical_aid_2", "insurance": "medical_aid", "assets": 40000000,
+  "region_province": "경기도", "region_city": "남양주시",
+  "is_main_earner": true, "crisis_events": [], "caregiver_needed": false, "cognitive_concern": true,
+  "private_insurance_paid": 0
+}
